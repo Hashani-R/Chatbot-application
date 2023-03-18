@@ -1,0 +1,109 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.chat-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbox {
+    width: 20%;
+    height: 50vh;
+    background-color: #eee;
+    border-radius: 1rem;
+    box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.message-container {
+    padding: 1rem;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.message-row-me {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1rem;
+}
+
+.message-row-end {
+    margin-bottom: 1rem;
+}
+
+.message-row-end .message {
+    color: white;
+    background-color: #00CF89;
+}
+
+.message-row-me .message {
+    text-align:  right;
+    color: #444;
+}
+
+.message {
+    padding: 1rem;
+    width: fit-content;
+    max-width: 60%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+}
+
+.message div:nth-child(1) {
+    width: fit-content;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.prompt {
+    display: flex;
+}
+
+.prompt input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    padding: 0 1rem;
+    outline: none;
+    font-style: italic;
+    color: #444;
+}
+
+.prompt button {
+    outline: none;
+    border: none;
+    background-color: hsl(160, 100%, 30%);
+    width: 100px;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.prompt button:hover {
+    background-color: hsl(160, 100%, 35%);
+}
+
+@media only screen and (max-width: 480px) {
+    .chatbox {
+        width: 90%;
+        height: 80vh;
+    }
+}
